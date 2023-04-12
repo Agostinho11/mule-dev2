@@ -16,9 +16,9 @@
 	</parent>
 
 	<!-- GAV Coordinates -->
-	<groupId>com.mycompany</groupId>
+	<groupId>b794caee-001b-4393-84ed-eaae32b9dff9</groupId>
 	<artifactId>check-in-papo-app</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>check-in-papo-app</name>
@@ -46,17 +46,30 @@
 					<configuration>
 						<cloudhub2Deployment>
 							<uri>https://anypoint.mulesoft.com</uri>
-							<businessGroupId>YOUR_OWN_ID</businessGroupId>
+							<businessGroupId>b794caee-001b-4393-84ed-eaae32b9dff9</businessGroupId>
 							<environment>Sandbox</environment>
 							<target>Cloudhub-US-East-2</target>
 							<provider>MC</provider>
 							<muleVersion>4.4.0</muleVersion>
-							<server>cloudhub-deploy</server>							<!-- reads credentials from settings.xml -->
-							<applicationName>YOUR_APP_NAME</applicationName>
+							
+							<server>cloudhub-deploy</server>							
+							<!-- reads credentials from settings.xml -->
+							
+							<!-- user and password credential, last to use-->
+							<!-- <username></username> -->
+							<!-- <password></password> -->
+							
+							<!-- clientid and clientsecret need to be on propreties on the integration, last to use-->
+							<!-- <connectedAppClientId>${ap.clientid}</connectedAppClientId> -->
+							<!-- <connectedAppClientSecret>${ap.clientsecret}</connectedAppClientSecret> -->
+							<!-- <connectedAppGrantType>client_credentials</connectedAppGrantType> -->
+							
+							<applicationName>checkin-auto</applicationName>
 							<replicas>1</replicas>
 							<vCores>0.1</vCores>
 							<deploymentTimeout>240000</deploymentTimeout>
 							<properties>
+								<!-- authorization credentials for Api Manager -->
 								<anypoint.platform.client_id>${ap.client_id}</anypoint.platform.client_id>
 								<anypoint.platform.client_secret>${ap.client_secret}</anypoint.platform.client_secret>
 							</properties>
