@@ -18,7 +18,7 @@
 	<!-- GAV Coordinates -->
 	<groupId>b794caee-001b-4393-84ed-eaae32b9dff9</groupId>
 	<artifactId>check-in-papo-app</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>check-in-papo-app</name>
